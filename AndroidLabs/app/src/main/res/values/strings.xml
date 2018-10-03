@@ -8,7 +8,7 @@
     <string name="password">Password</string>
     <string name="editText1">login name</string>
     <string name="btnLogin">Login</string>
-    <string name = "dialouge_msg">checkbox Clicked</string>
+    <string name="dialouge_msg">checkbox Clicked</string>
     <string name="dialouge_title">Do you want to continue?</string>
     <string name="OK">OK</string>
     <string name="Cancel">Cancel</string>

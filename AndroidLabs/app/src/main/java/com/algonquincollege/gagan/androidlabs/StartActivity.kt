@@ -19,10 +19,23 @@ class StartActivity : Activity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
         Log.i(activityName, "In onCreate()");
+        //val chatButton = findViewById<Button>(R.id.chatButton)
+        val chatButton = findViewById<Button>(R.id.chatButton)
         val button2 = findViewById<Button>(R.id.button)
+
         button2?.setOnClickListener(View.OnClickListener {
            val anotherActivity = Intent(this, ListItemActivity::class.java)
             startActivityForResult(anotherActivity,50)
+        })
+
+        chatButton?.setOnClickListener(View.OnClickListener {
+            Log.i(activityName,"User clicked start chat")
+        })
+
+        chatButton.setOnClickListener(View.OnClickListener {
+            //    arrayList.add(chatText.)
+            val newActivity = Intent(this,chatWindow::class.java)
+            startActivityForResult(newActivity,50)
         })
     }
 
@@ -38,6 +51,8 @@ class StartActivity : Activity() {
         else
             Log.e(activityName,"Activity not found")
     }
+
+
 
     override fun onResume() {
         super.onResume()
