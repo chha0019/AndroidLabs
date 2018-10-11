@@ -3,9 +3,11 @@ package com.algonquincollege.gagan.androidlabs
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
+import android.database.sqlite.SQLiteOpenHelper
 import android.graphics.Bitmap
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.provider.MediaStore
 import android.support.v7.widget.AlertDialogLayout
 import android.view.View
@@ -66,6 +68,8 @@ imageButton?.setOnClickListener(View.OnClickListener {
         }
         }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
